@@ -1,0 +1,6 @@
+# Dependencies for the data-prep script (scripts/prep_s_markers.py).
+# The training itself uses mixlab (see Requirements in README.md); the eval
+# tasks use the BabyLM evaluation pipeline, which installs its own deps.
+numpy
+tokenizers
+huggingface_hub   # for downloading the corpus + reference tokenizer

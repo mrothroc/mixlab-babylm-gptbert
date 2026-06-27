@@ -1,0 +1,76 @@
+{
+  "description": "(Super)GLUE fine-tune results for the mixlab reproduction. Macro = mean of each task's primary metric (accuracy; F1 for MRPC/QQP). Run with the BabyLM finetune harness (evaluation_pipeline.finetune.run) via scripts/run_glue.sh; hyperparams: lr 3e-5, seed 42, sequence_length 512, padding_side left, take_final. The reproduction was fine-tuned on RunPod GPUs.",
+  "macro": 64.18,
+  "per_task": {
+    "boolq": {
+      "primary_metric": "accuracy",
+      "primary_value": 67.34,
+      "accuracy": 67.34,
+      "f1": 75.14,
+      "mcc": 0.2771,
+      "num_labels": 2,
+      "batch_size": 16,
+      "epochs": 10
+    },
+    "multirc": {
+      "primary_metric": "accuracy",
+      "primary_value": 65.35,
+      "accuracy": 65.35,
+      "f1": 46.9,
+      "mcc": 0.271,
+      "num_labels": 2,
+      "batch_size": 16,
+      "epochs": 10
+    },
+    "rte": {
+      "primary_metric": "accuracy",
+      "primary_value": 58.27,
+      "accuracy": 58.27,
+      "f1": 56.72,
+      "mcc": 0.1666,
+      "num_labels": 2,
+      "batch_size": 32,
+      "epochs": 10
+    },
+    "wsc": {
+      "primary_metric": "accuracy",
+      "primary_value": 67.31,
+      "accuracy": 67.31,
+      "f1": 48.48,
+      "mcc": 0.2739,
+      "num_labels": 2,
+      "batch_size": 32,
+      "epochs": 30
+    },
+    "mrpc": {
+      "primary_metric": "f1",
+      "primary_value": 82.93,
+      "accuracy": 72.55,
+      "f1": 82.93,
+      "mcc": 0.291,
+      "num_labels": 2,
+      "batch_size": 32,
+      "epochs": 10
+    },
+    "qqp": {
+      "primary_metric": "f1",
+      "primary_value": 62.02,
+      "accuracy": 71.36,
+      "f1": 62.02,
+      "mcc": 0.3905,
+      "num_labels": 2,
+      "batch_size": 32,
+      "epochs": 10
+    },
+    "mnli": {
+      "primary_metric": "accuracy",
+      "primary_value": 46.05,
+      "accuracy": 46.05,
+      "f1": null,
+      "mcc": 0.1916,
+      "num_labels": 3,
+      "batch_size": 32,
+      "epochs": 10
+    }
+  }
+}

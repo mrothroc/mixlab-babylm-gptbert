@@ -1,0 +1,58 @@
+{
+  "description": "Per-component eval scores backing the table in README.md. Both models were scored through one identical harness: babylm-org/babylm-eval @ commit 3bf5142, mntp backend, FULL subsets. 'reference' = within-harness re-evaluation of the official BabyLM 2025 GPT-BERT masked-focus baseline (HF: BabyLM-community/babylm-baseline-10m-gpt-bert-masked-focus). 'reproduction' = the mixlab run (full-corpus, 9.87 epochs).",
+  "reading_definition": "reading = mean(EYE TRACKING SCORE, SELF-PACED READING SCORE).",
+  "aoa": "forfeited ~0 for BOTH models (a known upstream scorer issue for 16k-vocab models); excluded from the per-component comparison.",
+  "raw_predictions": "per-example predictions.json (5-7 MB/task) are omitted for size; the per-task score reports in reproduction/ and reference/ contain the headline numbers.",
+  "components": {
+    "blimp": {
+      "reference": 70.36,
+      "reproduction": 70.64
+    },
+    "blimp_supplement": {
+      "reference": 63.71,
+      "reproduction": 61.79
+    },
+    "ewok": {
+      "reference": 51.63,
+      "reproduction": 50.88
+    },
+    "entity_tracking": {
+      "reference": 40.14,
+      "reproduction": 40.33
+    },
+    "comps": {
+      "reference": 53.55,
+      "reproduction": 52.85
+    },
+    "reading": {
+      "reference": 6.39,
+      "_components": {
+        "reference": {
+          "eye": 9.4,
+          "spr": 3.37
+        },
+        "reproduction": {
+          "eye": 9.99,
+          "spr": 4.62
+        }
+      },
+      "reproduction": 7.3
+    },
+    "glue": {
+      "reference": 66.2,
+      "reproduction": 64.18,
+      "reference_source": "official published baseline (BabyLM 2025 baselines paper, Table 2); the baseline was NOT re-fine-tuned locally",
+      "reproduction_source": "eval_results/reproduction/glue.json (BabyLM finetune harness, RunPod GPUs)",
+      "note": "Macro = mean of per-task primary metric (accuracy; F1 for MRPC/QQP). A Space-scored variant of the reproduction gave 64.03.",
+      "reproduction_breakdown": {
+        "boolq": 67.34,
+        "multirc": 65.35,
+        "rte": 58.27,
+        "wsc": 67.31,
+        "mrpc": 82.93,
+        "qqp": 62.02,
+        "mnli": 46.05
+      }
+    }
+  }
+}

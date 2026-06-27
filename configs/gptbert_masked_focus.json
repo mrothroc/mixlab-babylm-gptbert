@@ -1,0 +1,224 @@
+{
+  "name": "gptbert_masked_focus_reftok_full",
+  "model_dim": 384,
+  "vocab_size": 16384,
+  "seq_len": 512,
+  "mlp_mult": 3.3333333,
+  "tie_embeddings": true,
+  "norm_type": "layernorm",
+  "norm_affine": false,
+  "norm_eps": 1e-07,
+  "norm_placement": "pre",
+  "ffn_internal_norm": true,
+  "mlm_head": "bert",
+  "layer_aggregation": "dwa",
+  "attn_dropout": 0.1,
+  "hidden_dropout": 0.1,
+  "blocks": [
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    },
+    {
+      "type": "plain",
+      "heads": 6,
+      "attention_mask": "bidirectional",
+      "relative_attention": "deberta_p2c_c2p",
+      "relative_attention_window": 32,
+      "relative_attention_parameterization": "shared_qk_reuse",
+      "relative_attention_embedding_norm": "layernorm",
+      "ffn_activation": "geglu",
+      "attn_bias": true,
+      "attn_value_gate": true,
+      "attn_post_norm": "before_outproj"
+    }
+  ],
+  "training": {
+    "steps": 9600,
+    "lr": 0.007,
+    "grad_clip": 2.0,
+    "weight_decay": 0.1,
+    "seed": 42,
+    "batch_tokens": 16384,
+    "optimizer": "lamb",
+    "lamb_beta1": 0.9,
+    "lamb_beta2": 0.98,
+    "lamb_eps": 1e-08,
+    "warmup_ratio": 0.016,
+    "warmdown_steps": 154,
+    "weight_init": "gptbert",
+    "objective": "hybrid",
+    "hybrid_mix_granularity": "example",
+    "hybrid_secondary_objective": "mntp",
+    "hybrid_clm_fraction": 0.0625,
+    "mlm_mask_token_id": 4,
+    "mlm_mask_token_prob": 0.8,
+    "mlm_random_token_prob": 0.1,
+    "mlm_kept_unchanged_prob": 0.1,
+    "mlm_mask_prob_schedule": [
+      [
+        0,
+        0.3
+      ],
+      [
+        7747,
+        0.15
+      ]
+    ],
+    "mlm_mask_prob_schedule_mode": "linear",
+    "z_loss": 0.0001,
+    "seq_len_schedule": [
+      [
+        0,
+        128
+      ],
+      [
+        3873,
+        256
+      ],
+      [
+        7747,
+        512
+      ]
+    ]
+  }
+}
