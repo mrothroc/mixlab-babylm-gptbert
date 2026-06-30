@@ -1,7 +1,7 @@
 {
   "description": "Per-component eval scores backing the table in README.md. Both models were scored through one identical harness: babylm-org/babylm-eval @ commit 3bf5142, mntp backend, FULL subsets. 'reference' = within-harness re-evaluation of the official BabyLM 2025 GPT-BERT masked-focus baseline (HF: BabyLM-community/babylm-baseline-10m-gpt-bert-masked-focus). 'reproduction' = the mixlab run (full-corpus, 9.87 epochs).",
   "reading_definition": "reading = mean(EYE TRACKING SCORE, SELF-PACED READING SCORE).",
-  "aoa": "age-of-acquisition is scored from a per-checkpoint surprisal trajectory submitted with the predictions (not the final model), which these artifacts omit, so AoA is forfeited (0). Not a 16k-vocab scorer bug; a noise-dominated metric (a single fixed model spans tens of points by extraction settings). Excluded from the per-component comparison.",
+  "aoa": "age-of-acquisition is forfeited (0): scored from a per-checkpoint surprisal trajectory submitted with the predictions, which these artifacts omit. The AoA scorer also has a confirmed, still-open upstream bug (log2/bits random-chance baseline + hardcoded ~300k vocab instead of the model's actual size; babylm-org/babylm-eval#2) that makes the metric noise-dominated (tens of points for one fixed model). Excluded from the per-component comparison.",
   "raw_predictions": "per-example predictions.json (5-7 MB/task) are omitted for size; the per-task score reports in reproduction/ and reference/ contain the headline numbers.",
   "components": {
     "blimp": {
