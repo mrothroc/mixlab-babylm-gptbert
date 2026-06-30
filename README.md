@@ -35,8 +35,7 @@ The per-task eval reports backing this table (both models, one harness) are in
 the reference on BLiMP and entity tracking. The **reference column is our within-harness re-evaluation of the official 2025 baseline model**, and
 it tracks the official published numbers (baselines paper, Table 2): essentially exact on BLiMP (official 70.4),
 supplement (63.7), entity (40.0), COMPS (53.5), reading (≈6.4), and GLUE (66.2), with EWoK the one outlier at
-51.6 vs the official 50.0 (harness variance). (AoA is forfeited ≈0 for both, a known scorer issue for 16k-vocab
-models; the official paper aggregates these components differently, so we report per-component, not a macro.)
+51.6 vs the official 50.0 (harness variance). (AoA is forfeited ≈0 here: age-of-acquisition is scored from a per-checkpoint surprisal trajectory submitted with the predictions, not from the final model, and these artifacts don't include one. It is *not* a 16k-vocab scorer bug — that earlier belief is incorrect — but a noise-dominated metric (scored with the leaderboard's own code, a single fixed model spans tens of points depending on extraction settings), so we report per-component, not a macro.)
 
 ## The architecture (read from the weights, not the card)
 

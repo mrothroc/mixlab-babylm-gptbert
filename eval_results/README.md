@@ -23,5 +23,7 @@ reproduction gave 64.03.
 ## Not included here
 - **Raw per-example `predictions.json`** (5–7 MB per zero-shot task) are omitted for size; the score reports
   carry the headline numbers.
-- **AoA** is forfeited ≈0 for **both** models (a known upstream scorer issue for 16k-vocab models) and is
-  excluded from the per-component comparison.
+- **AoA** is scored from a per-checkpoint surprisal trajectory submitted with the predictions (not the
+  final model), which these artifacts don't include, so it is forfeited (0). It is not a 16k-vocab scorer bug
+  (that earlier belief is incorrect) but a noise-dominated metric (a single fixed model spans tens of points
+  depending on extraction settings), and is excluded from the per-component comparison.
